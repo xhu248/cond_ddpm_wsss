@@ -1,4 +1,5 @@
-# How to use the code
+# Conditional Diffusion Models for Weakly Supervised Medical Image Segmentation [MICCAI 2023]
+(In progress)
 ## 0. Setup
 ### Environment
 the required packages are mostly same as [openai/improved_diffusion](https://github.com/openai/improved-diffusion)
@@ -67,6 +68,10 @@ python scripts/classifier_tumor_train.py --save_dir runs/results/guided_diff_bra
 python scripts/classifier_tumor_sample.py --save_dir runs/results/guided_diff_brats_cls_resnet \
 --src_dir ${data_dir}
 ```
+
+## 4. Weakly supervised segmentation
+
+coming soon...
 
 
 
