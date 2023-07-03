@@ -53,7 +53,7 @@ class ImageDataset(Dataset):
         else:
             label = torch.zeros(1)
         # img = self.transform(img)
-        img = self.transform(img) / 127.5 - 1
+        # img = self.transform(img) / 127.5 - 1
         return img, label
     
     def __len__(self):
