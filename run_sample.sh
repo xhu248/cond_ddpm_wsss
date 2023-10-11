@@ -1,20 +1,6 @@
 #!/bin/bash
 
-#$ -M xhu7@nd.edu      # Email address for job notification
-#$ -m abe                # Send mail when job begins, ends and aborts
-#$ -pe smp 4    # Specify parallel environment and legal core size
-#$ -q gpu
-#$ -l gpu_card=1
-#$ -N guided_diff_cls_4_chaos_res # Specify job name
-
-
-# run mae
-#CUDA_VISIBLE_DEVICES=0 python main_pretraining.py --batch_size=2 --num_steps=1000 --pretrain_mode mae \
-# --model unetr_pretrain --logdir=results/unetr_mae --optim_lr 4e-4
-
-module load conda
-module load mpich  # necessary for import package mpi4py
-source activate diffusion
+source activate wsss
 
 MODEL_FLAGS="--num_channels 128 --num_res_blocks 3 --learn_sigma True --class_cond True" #--learn_sigma True --class_cond True
 DIFFUSION_FLAGS="--diffusion_steps 1000 --noise_schedule cosine --rescale_learned_sigmas False --rescale_timesteps False"

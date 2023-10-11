@@ -110,7 +110,7 @@ def create_argparser():
     )
     defaults.update(model_and_diffusion_defaults())
     parser = argparse.ArgumentParser()
-    parser.add_argument("--dataset", default='tumor', type=str,
+    parser.add_argument("--dataset", default='brats', type=str,
                         help='choose dataset')
     parser.add_argument("--save_dir", default='./run/results/diff_tumor', type=str,
                         help='where to store results and logger')

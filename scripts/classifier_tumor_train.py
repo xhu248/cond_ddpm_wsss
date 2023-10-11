@@ -244,7 +244,7 @@ def save_model(mp_trainer, opt, step):
     if dist.get_rank() == 0:
         th.save(
             mp_trainer.master_params_to_state_dict(mp_trainer.master_params),
-            os.path.join(logger.get_dir(), f"model.pt"),
+            os.path.join(logger.get_dir(), f"classifier_model.pt"),
         )
         th.save(opt.state_dict(), os.path.join(logger.get_dir(), f"opt.pt"))
 

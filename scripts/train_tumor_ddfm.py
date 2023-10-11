@@ -104,7 +104,7 @@ def create_argparser():
         use_fp16=False,
         fp16_scale_growth=1e-3,
         model_name='unet',
-        img_size=240,
+        img_size=224,
     )
     defaults.update(model_and_diffusion_defaults())
     parser = argparse.ArgumentParser()
