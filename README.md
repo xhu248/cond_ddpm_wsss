@@ -26,7 +26,7 @@ The data folder structure is like:
                         ├── seg # label mask
                     ├── validation
 
-## 1. train DDFM models
+## 1. train DDPM models
 for tumor images:
 ```angular2html
 MODEL_FLAGS="--num_channels 128 --num_res_blocks 3  "
