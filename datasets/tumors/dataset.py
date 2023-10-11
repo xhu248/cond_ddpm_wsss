@@ -53,6 +53,7 @@ class ImageDataset(Dataset):
             label = torch.ones(1)
         else:
             label = torch.zeros(1)
+
         img = self.transform(img)
 
         return img, label
