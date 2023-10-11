@@ -1,5 +1,6 @@
 # Conditional Diffusion Models for Weakly Supervised Medical Image Segmentation [MICCAI 2023]
-(In progress)
+[[`Paper`](https://arxiv.org/pdf/2306.03878.pdf)]
+![](./pseudo_code.png)
 ## 0. Setup
 ### Environment
 the required packages are mostly same as [openai/improved_diffusion](https://github.com/openai/improved-diffusion)
@@ -70,8 +71,17 @@ python scripts/classifier_tumor_sample.py --save_dir runs/results/guided_diff_br
 ```
 
 ## 4. Weakly supervised segmentation
+```angular2html
+MODEL_FLAGS="--num_channels 128 --num_res_blocks 3 --learn_sigma True --class_cond True " # --learn_sigma True --class_cond True
+DIFFUSION_FLAGS="--diffusion_steps 4000 "
+TRAIN_FLAGS="--lr 3e-4 --batch_size 2"
 
-coming soon...
+python scripts/image_p_seg.py \
+--save_dir {where_you_save_classifier} \
+--model_path {where_you_save_diffusion} \
+$MODEL_FLAGS $DIFFUSION_FLAGS -f 0 --batch_size 1 --guided
+```
+
 
 
 
